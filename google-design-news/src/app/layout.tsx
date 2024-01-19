@@ -1,4 +1,4 @@
-import Providers from "@/services/service-providers";
+import Providers from "@/services/providers/service-providers";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
