@@ -1,3 +1,4 @@
+import Providers from "@/services/service-providers";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
