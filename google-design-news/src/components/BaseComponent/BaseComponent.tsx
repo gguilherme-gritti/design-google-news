@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { StyleSheet } from "@/common/styles/stylesheet";
 import * as S from './styles';
 
 interface IBaseComponentProps {
-    sx?: StyleSheet;
+    styleSheet?: StyleSheet;
     [key: string]: any;
 }
 
@@ -15,6 +17,6 @@ export const BaseComponent = React.forwardRef<unknown, IBaseComponentProps>((pro
 
 BaseComponent.displayName = 'BaseComponent';
 BaseComponent.defaultProps = {
-    sx: {}
+    styleSheet: {}
 }
 

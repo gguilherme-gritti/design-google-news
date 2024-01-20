@@ -1,3 +1,5 @@
+import Heading from "@/components/Heading/Heading";
+
 export default function Home() {
-  return <h1>Hello World</h1>;
+  return <Heading variant="sm">Heading Test</Heading>
 }

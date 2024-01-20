@@ -1,5 +1,3 @@
-"use client";
-
 import StyledComponentsRegistry from "./registry";
 
 const ThemesProviders = ({ children }: { children: React.ReactNode }) => {

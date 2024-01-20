@@ -10,10 +10,12 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   const [client] = useState(new QueryClient(defaultReactQuerySettings));
 
   return (
-    <QueryClientProvider client={client}>
-      <ThemesProviders>{children}</ThemesProviders>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <ThemesProviders>
+      <QueryClientProvider client={client}>
+        {children}
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </ThemesProviders>
   );
 };
 
