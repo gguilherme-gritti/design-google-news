@@ -12,5 +12,6 @@ export const StyledBaseComponent = styled.div<IStyledBaseComponent>`
   flex-direction: column;
   align-content: flex-start;
   flex-shrink: 0;
+
   ${({ styleSheet }) => parseStyleSheet(styleSheet)}
 `;

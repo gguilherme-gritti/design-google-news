@@ -10,11 +10,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100%;
     flex-direction: column;
   }
-  body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
+
   #__next {
     width: 100%;
     overflow: hidden;

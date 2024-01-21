@@ -24,8 +24,6 @@ const Paragraph = React.forwardRef(
       ...styleSheet,
     };
 
-    console.log(sxProps);
-
     return (
       <BaseComponent as={tag} {...props} ref={ref} styleSheet={sxProps}>
         {children}

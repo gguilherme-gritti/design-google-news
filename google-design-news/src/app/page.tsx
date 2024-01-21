@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import Heading from "@/components/Heading/Heading";
 import Paragraph from "@/components/Paragraph/Paragraph";
 import Subtitle from "@/components/Subtitle/Subtitle";
@@ -15,6 +16,7 @@ export default function Home() {
         centuries, but also the lleap into electronic typesetting, remaining
         essentially unchanged.
       </Paragraph>
+      <Button variant="primary">Button Label</Button>
     </>
   );
 }
