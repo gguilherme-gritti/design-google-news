@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :pushpin: Table of Contents
 
-## Getting Started
+- [Demo Website](#eyes-demo-website)
+- [Technologies](#computer-technologies)
+- [Features](#rocket-features)
+- [How to Run](#construction_worker-how-to-run)
 
-First, run the development server:
+# :eyes: Demo Website
+
+![image](https://github.com/gguilherme-gritti/gguilherme-gritti/assets/78884167/b5da3751-7260-4e5c-a867-d91775c3824d)
+
+# :computer: Technologies
+
+The technologies used in the project:
+
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [ReactQuery](https://react-query-v3.tanstack.com)
+- [Styled-Components](https://styled-components.com)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Testing-Library](https://testing-library.com)
+- [Axios](https://axios-http.com)
+- [Skynex-ui](https://skynexui.dev)
+- [StoryBook](https://storybook.js.org/addons/@storybook/addon-styling)
+
+# :rocket: Features
+
+Testing application, ReactQuery fetching an public API that returns a list of notices, with a UI and Responsive front design
+
+# :construction_worker: How to run
+
+Require Node, Yarn
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone Repository
+$ git clone https://github.com/gguilherme-gritti/design-google-news.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+CD to google-design-news
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 💻 Run Web Project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# Install Dependencies
+$ yarn install
 
-## Learn More
+# Run Aplication
+$ yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Go to http://localhost:3000/ to see the result.
