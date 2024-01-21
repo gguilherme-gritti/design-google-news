@@ -3,14 +3,17 @@
 import React, { memo } from "react";
 import { BaseComponent } from "../BaseComponent/BaseComponent";
 import { getDefault } from "./StyledFunctions";
-import { theme } from "@/common/styles/theme/theme";
+import { TTheme } from "@/common/styles/theme/theme";
+import { useTheme } from "styled-components";
 
-interface IShapeProps {
+export interface IShapeProps {
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
 }
 
 const Shape = ({ children, styleSheet, ...props }: IShapeProps) => {
+  const theme = useTheme() as unknown as TTheme;
+
   const sDefault = getDefault(theme);
 
   const sxProps = {

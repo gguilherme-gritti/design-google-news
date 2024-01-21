@@ -9,7 +9,8 @@ import Paragraph from "../Paragraph/Paragraph";
 import Button from "../Button/Button";
 import { memo } from "react";
 import { getMargin } from "./StyledFunctions";
-import { theme } from "@/common/styles/theme/theme";
+import { TTheme } from "@/common/styles/theme/theme";
+import { useTheme } from "styled-components";
 
 interface ICardContentProps {
   heading: string;
@@ -29,6 +30,8 @@ const CardContent = ({
   styleSheet,
   ...props
 }: ICardContentProps) => {
+  const theme = useTheme() as unknown as TTheme;
+
   const headingMargin = getMargin(theme, "xxxs");
   const subtitleMargin = getMargin(theme, "xxs");
   const paragraphMargin = getMargin(theme, "sm");

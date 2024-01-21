@@ -4,11 +4,12 @@ import React, { memo } from "react";
 import { StyleSheet } from "@/common/styles/stylesheet";
 import { BaseComponent } from "../BaseComponent/BaseComponent";
 import { getDefault } from "./StyledFunctions";
-import { theme } from "@/common/styles/theme/theme";
+import { TTheme } from "@/common/styles/theme/theme";
+import { useTheme } from "styled-components";
 
 export type TParagraphTag = "p" | "label";
 
-interface IParagraphProps {
+export interface IParagraphProps {
   tag?: TParagraphTag;
   ref: any;
   styleSheet?: StyleSheet;
@@ -17,6 +18,8 @@ interface IParagraphProps {
 
 const Paragraph = React.forwardRef(
   ({ tag, styleSheet, children, ...props }: IParagraphProps, ref) => {
+    const theme = useTheme() as unknown as TTheme;
+
     const sDefault = getDefault(theme);
 
     const sxProps = {

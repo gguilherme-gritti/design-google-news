@@ -29,7 +29,7 @@ export default function StyledComponentsRegistry({
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
       <GlobalStyles />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      {children}
     </StyleSheetManager>
   );
 }
