@@ -1,8 +1,11 @@
+import { theme } from "@/common/styles/theme/theme";
 import styled from "styled-components";
+
+const { spacing, font, line } = theme;
 
 export const Section = styled.div`
   height: 45vh;
-  width: 100%;
+  width: ${line.height.tight.value};
 
   display: flex;
   justify-content: center;
@@ -10,11 +13,11 @@ export const Section = styled.div`
 `;
 
 export const Container = styled.div`
-  margin-top: 50px;
+  margin-top: ${spacing.size.md.value};
 
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: ${spacing.size.xxs.value};
 
   justify-content: center;
   align-items: center;
@@ -22,7 +25,7 @@ export const Container = styled.div`
   strong,
   h1,
   p {
-    font-family: "Archivo";
+    font-family: ${font.family.highlight.value};
   }
 
   p {

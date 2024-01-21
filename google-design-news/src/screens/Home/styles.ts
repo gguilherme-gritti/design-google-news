@@ -1,11 +1,13 @@
+import { theme } from "@/common/styles/theme/theme";
 import styled from "styled-components";
+
+const { spacing } = theme;
 
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-
   justify-content: center;
 
-  padding: 50px;
+  gap: ${spacing.size.xs.value};
+  padding: ${spacing.size.md.value};
 `;
