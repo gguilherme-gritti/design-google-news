@@ -14,15 +14,25 @@
 The technologies used in the project:
 
 - [Typescript](https://www.typescriptlang.org/)
+  - for typing and better visualization of parameters
 - [React](https://reactjs.org/)
+  - one of the most versatile and used technologies on the market
 - [Next.js](https://nextjs.org/)
+  - for better performance with server-side rendering
 - [ReactQuery](https://react-query-v3.tanstack.com)
+  - to perform data fetching and cache data, avoiding unnecessary requests
 - [Styled-Components](https://styled-components.com)
+  - css in js to apply a theme according to a design token
 - [Jest](https://jestjs.io/pt-BR/)
+  - to perform tests on the component and ensure software and code quality
 - [Testing-Library](https://testing-library.com)
+  - to perform tests on the component and ensure software and code quality
 - [Axios](https://axios-http.com)
+  - handle requests with authentication and error interceptors
 - [Skynex-ui](https://skynexui.dev)
+  - to create the BaseComponent, a component for components
 - [StoryBook](https://storybook.js.org/addons/@storybook/addon-styling)
+  - to document the created components
 
 # :rocket: Features
 
@@ -37,7 +47,17 @@ Require Node, Yarn
 $ git clone https://github.com/gguilherme-gritti/design-google-news.git
 ```
 
-CD to google-design-news
+```bash
+# Change to correctly directory
+$ cd google-design-news
+```
+
+Create a '.env.local' file, with the values:
+
+- NEXT_PUBLIC_API_NEWS = "https://newsapi.org/v2"
+- NEXT_PUBLIC_NEWS_API_KEY = "d20e279c51cd46e4b332c82eb676ea3c"
+
+We need to do this to access de environment variables
 
 ### 💻 Run Web Project
 
