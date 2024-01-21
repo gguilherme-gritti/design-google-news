@@ -5,7 +5,7 @@ import { StyleSheet } from "@/common/styles/stylesheet";
 import { BaseComponent } from "../BaseComponent/BaseComponent";
 import { getVariant } from "./StyledFunctions";
 import { useTheme } from "styled-components";
-import { TTheme } from "@/common/styles/theme/theme";
+import { TTheme, theme } from "@/common/styles/theme/theme";
 
 export type THeadingVariant = 'sm';
 export type THeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -26,18 +26,17 @@ const Heading = React.forwardRef(({
     ...props
 }: IHeadingProps, ref) => {
 
-    const theme = useTheme() as unknown as TTheme;
     const sVariant = getVariant(theme, variant);
 
     const sxProps = {
-        sVariant,
+        ...sVariant,
         ...styleSheet
     };
 
     console.log('sx', sxProps);
 
     return (
-        <BaseComponent as={tag} {...props} ref={ref} styleSheet={styleSheet}>{children}</BaseComponent>
+        <BaseComponent as={tag} {...props} ref={ref} styleSheet={sxProps}>{children}</BaseComponent>
     )
 })
 

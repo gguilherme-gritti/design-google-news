@@ -8,8 +8,8 @@ const sizeBy = (theme: TTheme) => {
 
   return {
     sm: {
-      fontSize: font.size.lg, // $font-size-lg
-      lineHeight: line.height.distant, // $line-height-distant
+      fontSize: font.size.lg.value, // $font-size-lg
+      lineHeight: line.height.distant.value, // $line-height-distant
     },
   };
 };
@@ -19,9 +19,9 @@ const colorBy = (theme: TTheme) => {
 
   return {
     sm: {
-      fontFamily: font.family.highlight, // $font-family-highlight
-      fontWeight: font.weight.bold, // $font-weight-bold
-      color: neutral.color[1], // $color-neutral-01
+      fontFamily: font.family.highlight.value, // $font-family-highlight
+      fontWeight: font.weight.bold.value, // $font-weight-bold
+      color: neutral.color[5].value, // $color-neutral-01 ?
     },
   };
 };
