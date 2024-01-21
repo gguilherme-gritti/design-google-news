@@ -70,3 +70,13 @@ $ yarn dev
 ```
 
 Go to http://localhost:3000/ to see the result.
+
+Also,
+
+```bash
+# To view components documentation
+$ yarn storybook
+
+# To run the tests
+$ yarn test
+```
