@@ -16,7 +16,7 @@ interface ICardContentProps {
   heading: string;
   subtitle: string;
   text: string;
-  buttonLabel: string;
+  button: React.ReactNode;
   stylesheet?: StyleSheet;
 }
 
@@ -26,7 +26,7 @@ const CardContent = ({
   heading,
   subtitle,
   text,
-  buttonLabel,
+  button,
   stylesheet,
   ...props
 }: ICardContentProps) => {
@@ -67,7 +67,7 @@ const CardContent = ({
         >
           {text}
         </Paragraph>
-        <Button variant="primary">{buttonLabel}</Button>
+        {button}
       </Shape>
     </BaseComponent>
   );

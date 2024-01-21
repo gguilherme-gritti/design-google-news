@@ -2,6 +2,7 @@ import { TArticle } from "@/repositories/google-news/top-headlines";
 import * as S from "../styles";
 import CardContent from "@/components/CardContent/CardContent";
 import moment from "moment";
+import ButtonViewMore from "./ButtonViewMore";
 
 const FeedNews = ({ articles }: { articles: TArticle[] }) => {
   return (
@@ -12,7 +13,7 @@ const FeedNews = ({ articles }: { articles: TArticle[] }) => {
           heading={article.author}
           subtitle={moment(article.publishedAt).format("DD/MM/YYYY")}
           text={article.title}
-          buttonLabel="Ver mais"
+          button={<ButtonViewMore url={article.url} />}
         />
       ))}
     </S.Container>

@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import CardContent from "./CardContent";
 import { theme } from "../../common/styles/theme/theme";
+import Button from "../Button/Button";
 
 jest.mock("next/router", () => ({
   useRouter: () => ({
@@ -17,7 +18,7 @@ describe("CardContent Component", () => {
           heading="Heading"
           subtitle="Subtitle"
           text="Paragraph"
-          buttonLabel="Button"
+          button={<Button variant="primary">Button</Button>}
         />
       </ThemeProvider>
     );

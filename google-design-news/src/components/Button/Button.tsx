@@ -15,10 +15,11 @@ export interface ButtonProps {
   stylesheet?: StyleSheet;
   variant: TButtonVariant;
   ref?: any;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const Button = React.forwardRef(
-  ({ children, stylesheet, variant, ...props }: ButtonProps, ref) => {
+  ({ children, stylesheet, variant, onClick, ...props }: ButtonProps, ref) => {
     const theme = useTheme() as unknown as TTheme;
     const sDefault = getDefault(theme);
     const sVariant = getVariant(theme, variant);
@@ -30,7 +31,13 @@ const Button = React.forwardRef(
     };
 
     return (
-      <BaseComponent as={"button"} {...props} ref={ref} stylesheet={sxProps}>
+      <BaseComponent
+        as={"button"}
+        {...props}
+        ref={ref}
+        stylesheet={sxProps}
+        onClick={onClick}
+      >
         {children}
       </BaseComponent>
     );
