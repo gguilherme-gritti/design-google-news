@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import Providers from "@/services/providers/service-providers";
 import type { Metadata } from "next";
 
@@ -14,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

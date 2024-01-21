@@ -13,7 +13,6 @@ const HomeScreen = () => {
 
   return (
     <>
-      <Header />
       <Presentation />
       <FeedNews articles={articles || []} />
     </>
