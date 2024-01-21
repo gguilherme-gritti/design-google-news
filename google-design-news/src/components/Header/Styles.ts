@@ -1,24 +1,18 @@
+import { theme } from "@/common/styles/theme/theme";
 import styled from "styled-components";
+
+const { spacing, brand, neutral, spacing_squish, font } = theme;
 
 export const Nav = styled.nav`
   display: flex;
-  padding: 16px 64px;
+  padding: ${spacing.size.xxxs.value} ${spacing.size.xl.value};
   height: 84px;
-  border-bottom: 1px solid #e5e7eb;
 
   justify-content: center;
   align-items: center;
   width: 100%;
 
-  background-color: #f2f3f5;
-`;
-
-export const Content = styled.div`
-  width: 80%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: ${brand.color.primary[3].value};
 
   img {
     max-height: 60px;
@@ -27,35 +21,34 @@ export const Content = styled.div`
 `;
 
 export const Img = styled.div`
-  width: 50%;
-`;
-
-export const Navs = styled.div`
-  float: right;
+  flex-grow: 1;
 `;
 
 export const Ul = styled.ul`
+  display: flex;
+  gap: ${spacing.size.xxs.value};
+
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: flex;
 
   li {
     a {
       display: block;
       text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      transition: 0.8s;
-      border-radius: 10px;
-      margin-left: 15px;
+      padding: ${spacing_squish.size.xs.stack.value};
 
-      font-family: "Archivo";
+      text-decoration: none;
+      transition: 0.4s;
+      font-family: ${font.family.highlight.value};
+      font-size: ${font.size.xxs.value};
+
+      color: ${neutral.color[1].value};
 
       &:hover {
-        background-color: black;
-        color: white;
+        background-color: ${brand.color.primary[2].value};
+        color: ${neutral.color[5].value};
         cursor: pointer;
       }
     }
