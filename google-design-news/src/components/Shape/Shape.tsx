@@ -18,8 +18,6 @@ const Shape = ({ children, styleSheet, ...props }: IShapeProps) => {
     ...styleSheet,
   };
 
-  console.log(sxProps);
-
   return (
     <BaseComponent as={"div"} {...props} styleSheet={sxProps}>
       {children}
