@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { StyleSheet } from "@/common/styles/stylesheet";
 import * as S from './styles';

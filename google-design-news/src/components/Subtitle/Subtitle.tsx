@@ -3,22 +3,22 @@
 import React, { memo } from "react";
 import { StyleSheet } from "@/common/styles/stylesheet";
 import { BaseComponent } from "../BaseComponent/BaseComponent";
-import { getVariant } from "./StyledFunctions";
 import { theme } from "@/common/styles/theme/theme";
+import { getVariant } from "./StyledFunctions";
 
-export type THeadingVariant = "sm";
-export type THeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type TSubtitleVariant = "sm";
+export type TSubtitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
-interface IHeadingProps {
-  variant: THeadingVariant;
-  tag?: THeadingTag;
+interface ISubtitleProps {
+  variant: TSubtitleVariant;
+  tag?: TSubtitleTag;
   ref: any;
   styleSheet?: StyleSheet;
   children?: React.ReactNode;
 }
 
-const Heading = React.forwardRef(
-  ({ variant, tag, styleSheet, children, ...props }: IHeadingProps, ref) => {
+const Subtitle = React.forwardRef(
+  ({ variant, tag, styleSheet, children, ...props }: ISubtitleProps, ref) => {
     const sVariant = getVariant(theme, variant);
 
     const sxProps = {
@@ -34,11 +34,11 @@ const Heading = React.forwardRef(
   }
 );
 
-Heading.displayName = "Heading";
+Subtitle.displayName = "Subtitle";
 
-Heading.defaultProps = {
+Subtitle.defaultProps = {
   variant: "sm",
   tag: "h1",
 };
 
-export default memo(Heading);
+export default memo(Subtitle);
