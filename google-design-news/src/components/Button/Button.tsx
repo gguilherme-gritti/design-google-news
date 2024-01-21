@@ -26,8 +26,6 @@ const Button = React.forwardRef(
       ...styleSheet,
     };
 
-    console.log(sxProps);
-
     return (
       <BaseComponent as={"button"} {...props} ref={ref} styleSheet={sxProps}>
         {children}
