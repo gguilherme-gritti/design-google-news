@@ -12,13 +12,13 @@ export type TButtonVariant = "primary";
 
 export interface ButtonProps {
   children?: React.ReactNode;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
   variant: TButtonVariant;
   ref?: any;
 }
 
 const Button = React.forwardRef(
-  ({ children, styleSheet, variant, ...props }: ButtonProps, ref) => {
+  ({ children, stylesheet, variant, ...props }: ButtonProps, ref) => {
     const theme = useTheme() as unknown as TTheme;
     const sDefault = getDefault(theme);
     const sVariant = getVariant(theme, variant);
@@ -26,11 +26,11 @@ const Button = React.forwardRef(
     const sxProps = {
       ...sDefault,
       ...sVariant,
-      ...styleSheet,
+      ...stylesheet,
     };
 
     return (
-      <BaseComponent as={"button"} {...props} ref={ref} styleSheet={sxProps}>
+      <BaseComponent as={"button"} {...props} ref={ref} stylesheet={sxProps}>
         {children}
       </BaseComponent>
     );

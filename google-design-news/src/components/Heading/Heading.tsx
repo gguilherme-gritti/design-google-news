@@ -14,23 +14,23 @@ export interface IHeadingProps {
   variant: THeadingVariant;
   tag?: THeadingTag;
   ref: any;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
   children?: React.ReactNode;
 }
 
 const Heading = React.forwardRef(
-  ({ variant, tag, styleSheet, children, ...props }: IHeadingProps, ref) => {
+  ({ variant, tag, stylesheet, children, ...props }: IHeadingProps, ref) => {
     const theme = useTheme() as unknown as TTheme;
 
     const sVariant = getVariant(theme, variant);
 
     const sxProps = {
       ...sVariant,
-      ...styleSheet,
+      ...stylesheet,
     };
 
     return (
-      <BaseComponent as={tag} {...props} ref={ref} styleSheet={sxProps}>
+      <BaseComponent as={tag} {...props} ref={ref} stylesheet={sxProps}>
         {children}
       </BaseComponent>
     );

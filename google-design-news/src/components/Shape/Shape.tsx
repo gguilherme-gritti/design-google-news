@@ -8,21 +8,21 @@ import { useTheme } from "styled-components";
 
 export interface IShapeProps {
   children?: React.ReactNode;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
 }
 
-const Shape = ({ children, styleSheet, ...props }: IShapeProps) => {
+const Shape = ({ children, stylesheet, ...props }: IShapeProps) => {
   const theme = useTheme() as unknown as TTheme;
 
   const sDefault = getDefault(theme);
 
   const sxProps = {
     ...sDefault,
-    ...styleSheet,
+    ...stylesheet,
   };
 
   return (
-    <BaseComponent as={"div"} {...props} styleSheet={sxProps}>
+    <BaseComponent as={"div"} {...props} stylesheet={sxProps}>
       {children}
     </BaseComponent>
   );

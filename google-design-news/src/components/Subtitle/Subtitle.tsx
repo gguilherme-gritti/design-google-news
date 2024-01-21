@@ -14,23 +14,23 @@ export interface ISubtitleProps {
   variant: TSubtitleVariant;
   tag?: TSubtitleTag;
   ref: any;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
   children?: React.ReactNode;
 }
 
 const Subtitle = React.forwardRef(
-  ({ variant, tag, styleSheet, children, ...props }: ISubtitleProps, ref) => {
+  ({ variant, tag, stylesheet, children, ...props }: ISubtitleProps, ref) => {
     const theme = useTheme() as unknown as TTheme;
 
     const sVariant = getVariant(theme, variant);
 
     const sxProps = {
       ...sVariant,
-      ...styleSheet,
+      ...stylesheet,
     };
 
     return (
-      <BaseComponent as={tag} {...props} ref={ref} styleSheet={sxProps}>
+      <BaseComponent as={tag} {...props} ref={ref} stylesheet={sxProps}>
         {children}
       </BaseComponent>
     );

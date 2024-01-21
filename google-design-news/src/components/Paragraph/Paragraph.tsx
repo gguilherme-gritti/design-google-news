@@ -12,23 +12,23 @@ export type TParagraphTag = "p" | "label";
 export interface IParagraphProps {
   tag?: TParagraphTag;
   ref: any;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
   children?: React.ReactNode;
 }
 
 const Paragraph = React.forwardRef(
-  ({ tag, styleSheet, children, ...props }: IParagraphProps, ref) => {
+  ({ tag, stylesheet, children, ...props }: IParagraphProps, ref) => {
     const theme = useTheme() as unknown as TTheme;
 
     const sDefault = getDefault(theme);
 
     const sxProps = {
       ...sDefault,
-      ...styleSheet,
+      ...stylesheet,
     };
 
     return (
-      <BaseComponent as={tag} {...props} ref={ref} styleSheet={sxProps}>
+      <BaseComponent as={tag} {...props} ref={ref} stylesheet={sxProps}>
         {children}
       </BaseComponent>
     );

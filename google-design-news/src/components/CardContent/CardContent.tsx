@@ -17,7 +17,7 @@ interface ICardContentProps {
   subtitle: string;
   text: string;
   buttonLabel: string;
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
 }
 
 export type TSizeCardContentSpacing = "xxxs" | "xxs" | "sm";
@@ -27,7 +27,7 @@ const CardContent = ({
   subtitle,
   text,
   buttonLabel,
-  styleSheet,
+  stylesheet,
   ...props
 }: ICardContentProps) => {
   const theme = useTheme() as unknown as TTheme;
@@ -39,14 +39,14 @@ const CardContent = ({
   return (
     <BaseComponent
       {...props}
-      styleSheet={{
-        ...styleSheet,
+      stylesheet={{
+        ...stylesheet,
       }}
     >
       <Shape>
         <Heading
           variant="sm"
-          styleSheet={{
+          stylesheet={{
             ...headingMargin,
           }}
         >
@@ -54,14 +54,14 @@ const CardContent = ({
         </Heading>
         <Subtitle
           variant="sm"
-          styleSheet={{
+          stylesheet={{
             ...subtitleMargin,
           }}
         >
           {subtitle}
         </Subtitle>
         <Paragraph
-          styleSheet={{
+          stylesheet={{
             ...paragraphMargin,
           }}
         >

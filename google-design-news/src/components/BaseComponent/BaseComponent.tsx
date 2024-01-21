@@ -3,7 +3,7 @@ import { StyleSheet } from "@/common/styles/stylesheet";
 import * as S from "./styles";
 
 interface IBaseComponentProps {
-  styleSheet?: StyleSheet;
+  stylesheet?: StyleSheet;
   [key: string]: any;
 }
 
@@ -15,5 +15,5 @@ export const BaseComponent = React.forwardRef<unknown, IBaseComponentProps>(
 
 BaseComponent.displayName = "BaseComponent";
 BaseComponent.defaultProps = {
-  styleSheet: {},
+  stylesheet: {},
 };
