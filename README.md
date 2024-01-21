@@ -36,7 +36,7 @@ The technologies used in the project:
 
 # :rocket: Features
 
-Testing application, ReactQuery fetching an public API that returns a list of notices, with a UI and Responsive front design
+Application based on a design token to create a design system, and access via a page to consume the components, with tests, documentation, fetch and server-side rendering and cached data
 
 # :construction_worker: How to run
 
